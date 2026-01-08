@@ -8,10 +8,9 @@ def main():
     culture = "polish" # default for testing
     
     # prompt for culture name
-    #print("Enter culture name:")
+    print("Enter culture name:")
     try:
-        #culture = input().lower()
-        culture = culture.lower()
+        culture = input().lower()
     except:
         print("Error! Please enter a valid culture name")
         input()
