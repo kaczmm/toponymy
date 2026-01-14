@@ -7410,10 +7410,36 @@ e_britannia = {
 			}
 		}
 
-		d_hebrides = {
-			color = { 200 100 45 }
+		d_western_isles = {
+			color = { 225 120 30 }
 
-			capital = c_inner_hebrides #Islay
+			capital = c_outer_hebrides #Outer Hebrides
+
+			c_outer_hebrides = { #re-localized to Skye
+				color = { 255 225 55 }
+
+				b_skye = {
+					province = 1692
+
+					color = { 255 225 55 }
+
+				}
+
+				b_trotternish = {
+					province = 9819
+
+					color = { 255 225 55 }
+
+				}
+
+				b_baghnahuamh = {
+					province = 9820
+
+					color = { 255 225 55 }
+
+				}
+
+			}
 
 			c_inner_hebrides = { #re-localized to Bute
 				color = { 255 200 10 }
@@ -7483,68 +7509,6 @@ e_britannia = {
 					province = 9815
 
 					color = { 255 200 10 }
-
-				}
-
-			}
-
-			c_argyll = {
-				color = { 215 200 15 }
-
-				b_kilmarten = {
-					province = 1700
-
-					color = { 215 200 15 }
-
-				}
-				b_glencoe = {
-					province = 1701
-
-					color = { 215 200 15 }
-
-				}
-				b_lomond = {
-					province = 1702
-
-					color = { 215 200 15 }
-
-				}
-				b_ardnamurchon = {
-					province = 35
-
-					color = { 215 200 15 }
-
-				}
-			}
-
-		}
-
-		d_western_isles = {
-			color = { 225 120 30 }
-
-			capital = c_outer_hebrides #Outer Hebrides
-
-			c_outer_hebrides = { #re-localized to Skye
-				color = { 255 225 55 }
-
-				b_skye = {
-					province = 1692
-
-					color = { 255 225 55 }
-
-				}
-
-				b_trotternish = {
-					province = 9819
-
-					color = { 255 225 55 }
-
-				}
-
-				b_baghnahuamh = {
-					province = 9820
-
-					color = { 255 225 55 }
 
 				}
 
@@ -7651,59 +7615,6 @@ e_britannia = {
 			}
 		}
 
-		d_aberdeen = {
-			color = { 200 100 0 }
-
-			capital = c_mearns # Aberdeen
-
-			c_mearns = {
-				color = { 230 140 10 }
-
-				b_aberdeen = {
-					province = 1718
-
-					color = { 230 140 10 }
-
-				}
-				b_kincardine = {
-					province = 1719
-
-					color = { 230 140 10 }
-
-				}
-				b_ballater = {
-					province = 1722
-
-					color = { 230 140 10 }
-
-				}
-			}
-
-			c_buchan = {
-				color = { 255 175 75 }
-
-				b_banff = {
-					province = 1712
-
-					color = { 255 175 75 }
-
-				}
-				b_mortlach = {
-					province = 1713
-
-					color = { 255 175 75 }
-
-				}
-				b_peterhead = {
-					province = 1714
-
-					color = { 255 175 75 }
-
-				}
-			}
-
-		}
-
 		d_albany = {
 			color = { 220 130 0 }
 
@@ -7739,6 +7650,29 @@ e_britannia = {
 					province = 1745
 
 					color = { 220 130 0 }
+
+				}
+			}
+
+			c_mearns = {
+				color = { 230 140 10 }
+
+				b_aberdeen = {
+					province = 1718
+
+					color = { 230 140 10 }
+
+				}
+				b_kincardine = {
+					province = 1719
+
+					color = { 230 140 10 }
+
+				}
+				b_ballater = {
+					province = 1722
+
+					color = { 230 140 10 }
 
 				}
 			}
@@ -7828,77 +7762,6 @@ e_britannia = {
 
 		}
 
-		d_galloway = {
-			color = { 255 155 20 }
-
-			capital = c_galloway # c_galloway
-
-			ai_primary_priority = {
-				if = {
-					limit = {
-						culture = culture:cumbrian
-					}
-					add = @correct_culture_primary_score
-				}
-				if = {
-					limit = {
-						culture = culture:welsh
-						culture = culture:cornish
-						culture = culture:breton
-					}
-					add = @better_than_the_alternatives_score
-				}
-			}
-
-			c_galloway = {
-				cultural_names = {
-					name_list_pictish = cn_galwyddel
-					name_list_cumbrian = cn_galwyddel
-					name_list_welsh = cn_galwyddel
-					name_list_breton = cn_galwyddel
-					name_list_cornish = cn_galwyddel
-				}
-				color = { 230 120 65 }
-
-				b_kilcudbrite = {
-					province = 1682
-
-					color = { 230 120 65 }
-
-				}
-				b_sanquhar = {
-					province = 1683
-
-					color = { 230 120 65 }
-
-				}
-				b_wigtown = {
-					province = 1684
-
-					color = { 230 120 65 }
-
-				}
-			}
-
-			c_carrick = {
-				color = { 250 105 70 }
-
-				b_maybole = {
-					province = 1680
-
-					color = { 250 105 70 }
-
-				}
-				b_girvan = {
-					province = 1685
-
-					color = { 250 105 70 }
-
-				}
-			}
-
-		}
-
 		d_strathclyde = {
 			color = { 230 120 65 }
 
@@ -7969,6 +7832,82 @@ e_britannia = {
 					province = 1697
 
 					color = { 230 150 50 }
+
+				}
+			}
+
+			c_argyll = {
+				color = { 215 200 15 }
+
+				b_kilmarten = {
+					province = 1700
+
+					color = { 215 200 15 }
+
+				}
+				b_glencoe = {
+					province = 1701
+
+					color = { 215 200 15 }
+
+				}
+				b_lomond = {
+					province = 1702
+
+					color = { 215 200 15 }
+
+				}
+				b_ardnamurchon = {
+					province = 35
+
+					color = { 215 200 15 }
+
+				}
+			}
+
+			c_carrick = {
+				color = { 250 105 70 }
+
+				b_maybole = {
+					province = 1680
+
+					color = { 250 105 70 }
+
+				}
+				b_girvan = {
+					province = 1685
+
+					color = { 250 105 70 }
+
+				}
+			}
+
+			c_galloway = {
+				cultural_names = {
+					name_list_pictish = cn_galwyddel
+					name_list_cumbrian = cn_galwyddel
+					name_list_welsh = cn_galwyddel
+					name_list_breton = cn_galwyddel
+					name_list_cornish = cn_galwyddel
+				}
+				color = { 230 120 65 }
+
+				b_kilcudbrite = {
+					province = 1682
+
+					color = { 230 120 65 }
+
+				}
+				b_sanquhar = {
+					province = 1683
+
+					color = { 230 120 65 }
+
+				}
+				b_wigtown = {
+					province = 1684
+
+					color = { 230 120 65 }
 
 				}
 			}
@@ -8229,6 +8168,34 @@ e_britannia = {
 
 				}
 			}
+			c_ross = {
+				color = { 250 210 85 }
+
+				b_dingwall = {
+					province = 1703
+
+					color = { 250 210 85 }
+
+				}
+				b_gairloch = {
+					province = 1704
+
+					color = { 250 210 85 }
+
+				}
+				b_tain = {
+					province = 10100
+
+					color = { 250 210 85 }
+
+				}
+				b_applecross = {
+					province = 10101
+
+					color = { 250 210 85 }
+
+				}
+			}
 
 			c_caithness = {
 				color = { 240 220 145 }
@@ -8276,31 +8243,26 @@ e_britannia = {
 
 				}
 			}
-			c_ross = {
-				color = { 250 210 85 }
 
-				b_dingwall = {
-					province = 1703
+			c_buchan = {
+				color = { 255 175 75 }
 
-					color = { 250 210 85 }
+				b_banff = {
+					province = 1712
 
-				}
-				b_gairloch = {
-					province = 1704
-
-					color = { 250 210 85 }
+					color = { 255 175 75 }
 
 				}
-				b_tain = {
-					province = 10100
+				b_mortlach = {
+					province = 1713
 
-					color = { 250 210 85 }
+					color = { 255 175 75 }
 
 				}
-				b_applecross = {
-					province = 10101
+				b_peterhead = {
+					province = 1714
 
-					color = { 250 210 85 }
+					color = { 255 175 75 }
 
 				}
 			}
@@ -34424,9 +34386,6 @@ e_wendish_empire = { # Renamed to Great Lechia, disabled "the" prefix
 			}
 			c_prenzlau = {
 				color = { 115 160 115 }
-				
-				# Tribe name... not sure if i should use this...
-				# name_list_pommeranian = cn_redaria
 
 				cultural_names = { # prenzlau comes from Premyslov -> Przemysłów
 					name_list_sorbian = cn_prenzlau_sorbian
@@ -55369,34 +55328,6 @@ e_carpathia = {
 
 				}
 			}
-			c_severin = {
-				color = { 247 201 78 }
-
-				b_severin = {
-					province = 516
-
-					color = { 247 201 78 }
-
-				}
-				b_orsova = {
-					province = 4975
-
-					color = { 247 201 78 }
-
-				}
-				b_mehadia = {
-					province = 4976
-
-					color = { 247 201 78 }
-
-				}
-				b_karansebes = {
-					province = 3881
-
-					color = { 247 201 78 }
-
-				}
-			}
 			c_calafat = {
 				color = { 255 176 76 }
 
@@ -56152,6 +56083,44 @@ e_carpathia = {
 					cultural_names = {
 						name_list_czech = cn_kecsemet_czechoslovak
 						name_list_slovien = cn_kecsemet_czechoslovak
+					}
+				}
+			}
+			c_borsod = { # moved to make prettier border
+				color = { 135 50 50 }
+
+				cultural_names = {
+					name_list_czech = cn_borsod_slovak
+					name_list_slovien = cn_borsod_slovak
+					name_list_polish = cn_borsod_polish
+					name_list_sorbian = cn_borsod_polish
+					name_list_pommeranian = cn_borsod_polish
+				}
+
+				b_borsod = {
+					province = 3870
+
+					color = { 135 50 50 }
+
+					cultural_names = {
+						name_list_czech = cn_borsod_slovak
+						name_list_slovien = cn_borsod_slovak
+						name_list_polish = cn_borsod_polish
+						name_list_sorbian = cn_borsod_polish
+						name_list_pommeranian = cn_borsod_polish
+					}
+				}
+				b_miskolc = {
+					province = 3871
+
+					color = { 135 50 50 }
+
+					cultural_names = {
+						name_list_czech = cn_miskolc_slovak
+						name_list_slovien = cn_miskolc_slovak
+						name_list_polish = cn_miskolc_polish
+						name_list_sorbian = cn_miskolc_polish
+						name_list_pommeranian = cn_miskolc_polish
 					}
 				}
 			}
@@ -57190,44 +57159,6 @@ e_carpathia = {
 						name_list_polish = cn_varanno_polish
 						name_list_sorbian = cn_varanno_polish
 						name_list_pommeranian = cn_varanno_polish
-					}
-				}
-			}
-			c_borsod = {
-				color = { 135 50 50 }
-
-				cultural_names = {
-					name_list_czech = cn_borsod_slovak
-					name_list_slovien = cn_borsod_slovak
-					name_list_polish = cn_borsod_polish
-					name_list_sorbian = cn_borsod_polish
-					name_list_pommeranian = cn_borsod_polish
-				}
-
-				b_borsod = {
-					province = 3870
-
-					color = { 135 50 50 }
-
-					cultural_names = {
-						name_list_czech = cn_borsod_slovak
-						name_list_slovien = cn_borsod_slovak
-						name_list_polish = cn_borsod_polish
-						name_list_sorbian = cn_borsod_polish
-						name_list_pommeranian = cn_borsod_polish
-					}
-				}
-				b_miskolc = {
-					province = 3871
-
-					color = { 135 50 50 }
-
-					cultural_names = {
-						name_list_czech = cn_miskolc_slovak
-						name_list_slovien = cn_miskolc_slovak
-						name_list_polish = cn_miskolc_polish
-						name_list_sorbian = cn_miskolc_polish
-						name_list_pommeranian = cn_miskolc_polish
 					}
 				}
 			}
@@ -58397,6 +58328,34 @@ e_carpathia = {
 					province = 3974
 
 					color = { 135 105 75 }
+
+				}
+			}
+			c_severin = { # moved here bc the borders of Hungary are wrong
+				color = { 247 201 78 }
+
+				b_severin = {
+					province = 516
+
+					color = { 247 201 78 }
+
+				}
+				b_orsova = {
+					province = 4975
+
+					color = { 247 201 78 }
+
+				}
+				b_mehadia = {
+					province = 4976
+
+					color = { 247 201 78 }
+
+				}
+				b_karansebes = {
+					province = 3881
+
+					color = { 247 201 78 }
 
 				}
 			}
@@ -121921,4 +121880,23 @@ d_taranto = {
 
 d_durazzo = {
 	color = { 180 85 120 }
+}
+
+#disabled by me
+
+d_aberdeen = {
+	color = { 200 100 0 }
+	capital = c_mearns # Aberdeen
+}
+
+d_galloway = {
+	color = { 255 155 20 }
+
+	capital = c_galloway # c_galloway
+
+}
+
+d_hebrides = { # merged into western isles
+	color = { 200 100 45 }
+	capital = c_inner_hebrides #Islay
 }

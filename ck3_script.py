@@ -132,6 +132,7 @@ def culture_filter(titles,d):
 
                 # continue until we find a cname block or another title
                 cn_start = -1
+                nice_spot = -1
                 #print("..looking for cname block..")
                 for j in range(i,len(ts)):
                     line = ts[j].strip()
@@ -159,7 +160,7 @@ def culture_filter(titles,d):
                         i = j
                         #if debug: print("c")
                         break
-                    elif "color = {" in line:
+                    elif "color = " in line:
                         nice_spot = j+1 # nice clean spot to insert cname block
                         #print("found a nice spot for",t)
                         #if debug: print("d")
@@ -171,6 +172,7 @@ def culture_filter(titles,d):
                 
                 # elif no cname block > make one and add to it
                 elif cn_start == -1:
+                    if nice_spot == -1: nice_spot = title_start+1
                     #if debug: print("printed a new block")
                     ts.insert(nice_spot, ws+"cultural_names = {")
                     ts.insert(nice_spot+1, ws+"\t"+name_list+" = "+"cn_"+t+"_"+culture)
@@ -203,7 +205,7 @@ def fix_titles(csv):
     loc = ['l_english:']
     for (t,c) in list_of_pairs:
         loc.append(' '+t+':0 "'+c)
-        loc.append(' '+t+'_adj:0 "'+demonym(c))
+        loc.append(' '+t+'_adj:0 "'+demonym(c)+'"')
 
     # then just write this to a new file
     loc_file_name = "zztp_titles_replace_l_english.yml"
